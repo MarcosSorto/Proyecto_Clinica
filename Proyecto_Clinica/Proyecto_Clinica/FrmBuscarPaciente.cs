@@ -59,7 +59,7 @@ namespace Proyecto_Clinica
              
                 Transacsion.Commit();
             }
-            catch (MySqlException ex)
+            catch (Exception)
             {
                 Transacsion.Rollback();
 

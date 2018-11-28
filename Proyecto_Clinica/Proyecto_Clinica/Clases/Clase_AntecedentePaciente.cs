@@ -70,7 +70,6 @@ namespace Proyecto_Clinica.Clases
         public static Clase_AntecedentePaciente BuscarAntecedente(string identidad)
         {
             Clase_Conexion con = new Clase_Conexion();
-            String m;
             con.Conectar();
             MySqlCommand Comando = con.Conexion.CreateCommand();
             Comando.Connection = con.Conexion;
@@ -117,7 +116,6 @@ namespace Proyecto_Clinica.Clases
         public static bool InsertarAntecedente(Clase_AntecedentePaciente nuevo)
         {
             Clase_Conexion con = new Clase_Conexion();
-            String m;
             con.Conectar();
             MySqlCommand Comando = con.Conexion.CreateCommand();
             Comando.Connection = con.Conexion;
@@ -147,7 +145,6 @@ namespace Proyecto_Clinica.Clases
         public static bool ActualizarAntecedente(Clase_AntecedentePaciente nuevo)
         {
             Clase_Conexion con = new Clase_Conexion();
-            String m;
             con.Conectar();
             MySqlCommand Comando = con.Conexion.CreateCommand();
             Comando.Connection = con.Conexion;

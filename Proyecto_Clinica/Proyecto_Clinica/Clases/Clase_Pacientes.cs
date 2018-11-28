@@ -81,7 +81,7 @@ namespace Proyecto_Clinica
         {
             //Definimos la conexion y el comando
             Clase_Conexion con = new Clase_Conexion();
-            String m;
+
             con.Conectar();
             MySqlCommand Comando = con.Conexion.CreateCommand();
             Comando.Connection = con.Conexion;
@@ -229,7 +229,7 @@ namespace Proyecto_Clinica
 
                 return true;
             }
-            catch (MySqlException ex)
+            catch (Exception)
             {
                 
                 return false;
