@@ -47,9 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Clase_AntecedentePaciente.cs" />
     <Compile Include="Clases\Clase_Conexion.cs" />
     <Compile Include="Clases\Clase_Pacientes.cs" />
-    <Compile Include="Clase_AntecedentePaciente.cs" />
     <Compile Include="FrmAntecedentesPaciente.cs">
       <SubType>Form</SubType>
     </Compile>

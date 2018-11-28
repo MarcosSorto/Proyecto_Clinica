@@ -44,8 +44,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtcirugias = new System.Windows.Forms.TextBox();
             this.txtsalir = new System.Windows.Forms.Button();
-            this.txtactualizar = new System.Windows.Forms.Button();
-            this.txtguardar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtidentidad = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -229,31 +229,31 @@
             this.txtsalir.UseVisualStyleBackColor = false;
             this.txtsalir.Click += new System.EventHandler(this.txtsalir_Click);
             // 
-            // txtactualizar
+            // btnActualizar
             // 
-            this.txtactualizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtactualizar.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtactualizar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtactualizar.Location = new System.Drawing.Point(176, 522);
-            this.txtactualizar.Name = "txtactualizar";
-            this.txtactualizar.Size = new System.Drawing.Size(131, 44);
-            this.txtactualizar.TabIndex = 5;
-            this.txtactualizar.Text = "Actualizar";
-            this.txtactualizar.UseVisualStyleBackColor = false;
-            this.txtactualizar.Click += new System.EventHandler(this.txtactualizar_Click);
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnActualizar.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnActualizar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnActualizar.Location = new System.Drawing.Point(176, 522);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(131, 44);
+            this.btnActualizar.TabIndex = 5;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.txtactualizar_Click);
             // 
-            // txtguardar
+            // btnGuardar
             // 
-            this.txtguardar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtguardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtguardar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtguardar.Location = new System.Drawing.Point(16, 522);
-            this.txtguardar.Name = "txtguardar";
-            this.txtguardar.Size = new System.Drawing.Size(136, 44);
-            this.txtguardar.TabIndex = 4;
-            this.txtguardar.Text = "Guardar";
-            this.txtguardar.UseVisualStyleBackColor = false;
-            this.txtguardar.Click += new System.EventHandler(this.txtguardar_Click);
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnGuardar.Location = new System.Drawing.Point(16, 522);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(136, 44);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.txtguardar_Click);
             // 
             // txtidentidad
             // 
@@ -288,8 +288,8 @@
             this.ClientSize = new System.Drawing.Size(754, 593);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtidentidad);
-            this.Controls.Add(this.txtactualizar);
-            this.Controls.Add(this.txtguardar);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtsalir);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -333,8 +333,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtcirugias;
         private System.Windows.Forms.Button txtsalir;
-        private System.Windows.Forms.Button txtactualizar;
-        private System.Windows.Forms.Button txtguardar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.MaskedTextBox txtidentidad;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

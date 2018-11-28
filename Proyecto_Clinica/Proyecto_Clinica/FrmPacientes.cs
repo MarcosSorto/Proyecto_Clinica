@@ -240,7 +240,10 @@ namespace Proyecto_Clinica
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAntecedentesPaciente nuevo = new FrmAntecedentesPaciente();
+            identidad = maskedTextBox1.Text;
+            nombre = txtNombre.Text + " " + txtApellido.Text;
             nuevo.ShowDialog();
+
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
