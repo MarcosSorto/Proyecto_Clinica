@@ -35,16 +35,16 @@ namespace Proyecto_Clinica
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //ejecutarlimpieza();
-            //FrmExpedientes nuevo = new FrmExpedientes();
-            //nuevo.ShowDialog();
+            ejecutarlimpieza();
+            FrmExpedientes nuevo = new FrmExpedientes();
+            nuevo.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //ejecutarlimpieza();
-            //FrmInvetarioMedicina nuevo = new FrmInvetarioMedicina();
-            //nuevo.ShowDialog();
+            ejecutarlimpieza();
+            FrmInvetarioMedicina nuevo = new FrmInvetarioMedicina();
+            nuevo.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -77,16 +77,16 @@ namespace Proyecto_Clinica
 
         private void btnmedicos_Click(object sender, EventArgs e)
         {
-            //ocultarPersonal();
-            //FrmMedicos nuevo = new FrmMedicos();
-            //nuevo.ShowDialog();
+            ocultarPersonal();
+            FrmMedicos nuevo = new FrmMedicos();
+            nuevo.ShowDialog();
         }
 
         private void btnenfermeras_Click(object sender, EventArgs e)
         {
-            //ocultarPersonal();
-            //FrmPersonal nuevo = new FrmPersonal();
-            //nuevo.ShowDialog();
+            ocultarPersonal();
+            FrmPersonal nuevo = new FrmPersonal();
+            nuevo.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -136,25 +136,25 @@ namespace Proyecto_Clinica
 
         private void btnespecialidad_Click(object sender, EventArgs e)
         {
-            //ocultarMantenimiento();
-            //FrmEspecialidad nuevo = new FrmEspecialidad();
-            //nuevo.ShowDialog();
+            ocultarMantenimiento();
+            FrmEspecialidad nuevo = new FrmEspecialidad();
+            nuevo.ShowDialog();
 
         }
 
         private void btncuentas_Click(object sender, EventArgs e)
         {
-            //ejecutarlimpieza();
-            //FrmUsuarios n = new FrmUsuarios();
-            //n.ShowDialog();
-            //    ocultarMantenimiento();
+            ejecutarlimpieza();
+            FrmUsuarios n = new FrmUsuarios();
+            n.ShowDialog();
+            ocultarMantenimiento();
         }
 
         private void btnpresentacion_Click(object sender, EventArgs e)
         {
-            ////ejecutarlimpieza();
-            ////FrmPresentacion nuevo = new FrmPresentacion();
-            ////nuevo.ShowDialog();
+            ejecutarlimpieza();
+            FrmPresentacion nuevo = new FrmPresentacion();
+            nuevo.ShowDialog();
         }
 
         private void ejecutarlimpieza()
@@ -179,9 +179,9 @@ namespace Proyecto_Clinica
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //ejecutarlimpieza();
-            //FrmTelefono nuevo = new FrmTelefono();
-            //nuevo.ShowDialog();
+            ejecutarlimpieza();
+            FrmTelefono nuevo = new FrmTelefono();
+            nuevo.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -301,8 +301,8 @@ namespace Proyecto_Clinica
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            //FrmEnfermedades nuevo = new FrmEnfermedades();
-            //nuevo.ShowDialog();
+            FrmEnfermedades nuevo = new FrmEnfermedades();
+            nuevo.ShowDialog();
         }
     }
 }

@@ -68,17 +68,77 @@
     <Compile Include="FrmAntecedentesPaciente.designer.cs">
       <DependentUpon>FrmAntecedentesPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscarEnfermera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarEnfermera.designer.cs">
+      <DependentUpon>FrmBuscarEnfermera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarMedicina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarMedicina.designer.cs">
+      <DependentUpon>FrmBuscarMedicina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarMedico.designer.cs">
+      <DependentUpon>FrmBuscarMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBuscarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBuscarPaciente.designer.cs">
       <DependentUpon>FrmBuscarPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscarPacienteConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarPacienteConsulta.designer.cs">
+      <DependentUpon>FrmBuscarPacienteConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEnfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnfermedades.designer.cs">
+      <DependentUpon>FrmEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnfermedadExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnfermedadExpediente.designer.cs">
+      <DependentUpon>frmEnfermedadExpediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEspecialidad.designer.cs">
+      <DependentUpon>FrmEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExpedientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExpedientes.designer.cs">
+      <DependentUpon>FrmExpedientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInvetarioMedicina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInvetarioMedicina.designer.cs">
+      <DependentUpon>FrmInvetarioMedicina.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMedicos.designer.cs">
+      <DependentUpon>FrmMedicos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -92,6 +152,30 @@
     <Compile Include="FrmPacientes.designer.cs">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonal.designer.cs">
+      <DependentUpon>FrmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPresentación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPresentación.designer.cs">
+      <DependentUpon>FrmPresentación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReceta.designer.cs">
+      <DependentUpon>FrmReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelefono.designer.cs">
+      <DependentUpon>FrmTelefono.cs</DependentUpon>
+    </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +184,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,17 +199,59 @@
     <EmbeddedResource Include="FrmAntecedentesPaciente.resx">
       <DependentUpon>FrmAntecedentesPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarEnfermera.resx">
+      <DependentUpon>FrmBuscarEnfermera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarMedicina.resx">
+      <DependentUpon>FrmBuscarMedicina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarMedico.resx">
+      <DependentUpon>FrmBuscarMedico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarPaciente.resx">
       <DependentUpon>FrmBuscarPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarPacienteConsulta.resx">
+      <DependentUpon>FrmBuscarPacienteConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnfermedades.resx">
+      <DependentUpon>FrmEnfermedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnfermedadExpediente.resx">
+      <DependentUpon>frmEnfermedadExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEspecialidad.resx">
+      <DependentUpon>FrmEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExpedientes.resx">
+      <DependentUpon>FrmExpedientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInvetarioMedicina.resx">
+      <DependentUpon>FrmInvetarioMedicina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMedicos.resx">
+      <DependentUpon>FrmMedicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPacientes.resx">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonal.resx">
+      <DependentUpon>FrmPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPresentación.resx">
+      <DependentUpon>FrmPresentación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReceta.resx">
+      <DependentUpon>FrmReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelefono.resx">
+      <DependentUpon>FrmTelefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +265,9 @@
     </Compile>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
