@@ -253,11 +253,11 @@ namespace Proyecto_Clinica
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //FrmBuscarPaciente nuevo = new FrmBuscarPaciente();
-            //nuevo.ShowDialog();
-            //maskedTextBox1.Text = FrmBuscarPaciente.IdentidadPaciente;
-            //textBox2.Text = FrmBuscarPaciente.NombrePaciente;
-            //maskedTextBox1.Focus();
+            FrmBuscarPaciente nuevo = new FrmBuscarPaciente();
+            nuevo.ShowDialog();
+            maskedTextBox1.Text = FrmBuscarPaciente.IdentidadPaciente;
+            txtNombre.Text = FrmBuscarPaciente.NombrePaciente;
+            maskedTextBox1.Focus();
         }
     }
 }
