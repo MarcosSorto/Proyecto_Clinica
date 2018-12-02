@@ -19,6 +19,8 @@ namespace Proyecto_Clinica
         string codigo;
         public static string cod;
         public static string Medico;
+        public static int guardado = 0;
+        public static string NombrePaciente;
 
         
         public FrmExpedientes()
@@ -43,7 +45,7 @@ namespace Proyecto_Clinica
             }
         }
 
-        private void Cargar_Datos(string s)
+        public  void Cargar_Datos(string s)
         {
             Clase_Conexion con = new Clase_Conexion();
             String m;
@@ -72,8 +74,12 @@ namespace Proyecto_Clinica
                     Comando.ExecuteNonQuery();
                     m = Comando.Parameters["msj"].Value.ToString();
                     Comando.Dispose();
+                    cod = codigo;
+                    tcodigo.Text = codigo;
+                    Medico = txtnomM.Text;
+                    NombrePaciente = txtnombreP.Text;
+                    txtreceta.Text = codigo;
                     Transacsion.Commit();
-
                     MessageBox.Show(m);
                 }
                 else
@@ -97,12 +103,12 @@ namespace Proyecto_Clinica
                     cod = codigo;
                     tcodigo.Text = codigo;
                     Medico = txtnomM.Text;
-
+                    NombrePaciente = txtnombreP.Text;
                     txtreceta.Text = codigo;
                     Comando.Dispose();
                     Transacsion.Commit();
+                        MessageBox.Show(m);
 
-                    MessageBox.Show(m);
                 }
                 
             }
@@ -123,8 +129,18 @@ namespace Proyecto_Clinica
         private void Btnguardar_Click(object sender, EventArgs e)
 
         {
-            Cargar_Datos("sp_AgregarExpediente");
-            Limpiar();
+            if ( tcodigo.Text=="")
+            {
+                Cargar_Datos("sp_AgregarExpediente");
+                Limpiar();
+            }
+            else
+            {
+                Cargar_Datos("sp_EditarExpediente");
+                Limpiar();
+
+            }
+            
 
         }
 
@@ -139,7 +155,8 @@ namespace Proyecto_Clinica
 
         private void FrmExpedientes_Load(object sender, EventArgs e)
         {
-            //button4.Visible = true;
+            
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -269,8 +286,29 @@ namespace Proyecto_Clinica
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            frmEnfermedadExpediente nuevo = new frmEnfermedadExpediente();
-            nuevo.ShowDialog();
+            if(txtenM.Text=="" || txtnombreP.Text=="" || txtnomM.Text == "")
+            {
+                MessageBox.Show("Debe especificar el médico el paciente y el encargado para acceder.");
+            }
+            else
+            {
+                    if (tcodigo.Text=="")
+                    {
+                        Cargar_Datos("sp_AgregarExpediente");
+                        frmEnfermedadExpediente nuevo = new frmEnfermedadExpediente();
+                        nuevo.ShowDialog();
+                    }
+                    else
+                    {
+                        Cargar_Datos("sp_EditarExpediente");
+                        frmEnfermedadExpediente nuevo = new frmEnfermedadExpediente();
+                        nuevo.ShowDialog();
+                    }
+                   
+            }
+                 
+
+            
         }
     }
 }

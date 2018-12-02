@@ -36,17 +36,18 @@
             this.btnregresar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnbuscarmedicamento = new System.Windows.Forms.Button();
-            this.txtcodigomedicamento = new System.Windows.Forms.TextBox();
+            this.txtenfermedad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -55,7 +56,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
- 
             this.pictureBox1.Location = new System.Drawing.Point(-7, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 66);
@@ -77,6 +77,7 @@
             // 
             // txtExpediente
             // 
+            this.txtExpediente.Enabled = false;
             this.txtExpediente.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtExpediente.Location = new System.Drawing.Point(143, 114);
             this.txtExpediente.Name = "txtExpediente";
@@ -118,6 +119,7 @@
             this.btnregresar.TabIndex = 132;
             this.btnregresar.Text = "Regresar";
             this.btnregresar.UseVisualStyleBackColor = false;
+            this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
             // 
             // btnguardar
             // 
@@ -130,6 +132,7 @@
             this.btnguardar.TabIndex = 129;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // dataGridView1
             // 
@@ -140,93 +143,11 @@
             this.Descripcion,
             this.Codigo});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 286);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 272);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(470, 148);
             this.dataGridView1.TabIndex = 133;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btneliminar);
-            this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Controls.Add(this.btnbuscarmedicamento);
-            this.groupBox1.Controls.Add(this.txtcodigomedicamento);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(36, 158);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(470, 108);
-            this.groupBox1.TabIndex = 128;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle Receta";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(313, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 22);
-            this.label7.TabIndex = 74;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.BackColor = System.Drawing.Color.Black;
-            this.btneliminar.Location = new System.Drawing.Point(352, 72);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(95, 30);
-            this.btneliminar.TabIndex = 6;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.BackColor = System.Drawing.Color.Black;
-            this.btnagregar.Location = new System.Drawing.Point(248, 73);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(98, 30);
-            this.btnagregar.TabIndex = 5;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = false;
-            // 
-            // btnbuscarmedicamento
-            // 
-            this.btnbuscarmedicamento.BackColor = System.Drawing.Color.Black;
-            this.btnbuscarmedicamento.Location = new System.Drawing.Point(352, 26);
-            this.btnbuscarmedicamento.Name = "btnbuscarmedicamento";
-            this.btnbuscarmedicamento.Size = new System.Drawing.Size(95, 28);
-            this.btnbuscarmedicamento.TabIndex = 1;
-            this.btnbuscarmedicamento.Text = "Buscar";
-            this.btnbuscarmedicamento.UseVisualStyleBackColor = false;
-            // 
-            // txtcodigomedicamento
-            // 
-            this.txtcodigomedicamento.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtcodigomedicamento.Location = new System.Drawing.Point(147, 26);
-            this.txtcodigomedicamento.Name = "txtcodigomedicamento";
-            this.txtcodigomedicamento.Size = new System.Drawing.Size(200, 27);
-            this.txtcodigomedicamento.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(5, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Enfermedad";
-            // 
-            // txtPaciente
-            // 
-            this.txtPaciente.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPaciente.Location = new System.Drawing.Point(229, 114);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(277, 27);
-            this.txtPaciente.TabIndex = 139;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // Nombre
             // 
@@ -244,12 +165,107 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtcodigo);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btneliminar);
+            this.groupBox1.Controls.Add(this.btnagregar);
+            this.groupBox1.Controls.Add(this.btnbuscarmedicamento);
+            this.groupBox1.Controls.Add(this.txtenfermedad);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(36, 158);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(470, 108);
+            this.groupBox1.TabIndex = 128;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Detalle Receta";
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtcodigo.Location = new System.Drawing.Point(130, 28);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(80, 27);
+            this.txtcodigo.TabIndex = 140;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(313, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 22);
+            this.label7.TabIndex = 74;
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.Black;
+            this.btneliminar.Location = new System.Drawing.Point(370, 72);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(95, 30);
+            this.btneliminar.TabIndex = 6;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.BackColor = System.Drawing.Color.Black;
+            this.btnagregar.Location = new System.Drawing.Point(266, 73);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(98, 30);
+            this.btnagregar.TabIndex = 5;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            // 
+            // btnbuscarmedicamento
+            // 
+            this.btnbuscarmedicamento.BackColor = System.Drawing.Color.Black;
+            this.btnbuscarmedicamento.Location = new System.Drawing.Point(369, 29);
+            this.btnbuscarmedicamento.Name = "btnbuscarmedicamento";
+            this.btnbuscarmedicamento.Size = new System.Drawing.Size(95, 28);
+            this.btnbuscarmedicamento.TabIndex = 1;
+            this.btnbuscarmedicamento.Text = "Buscar";
+            this.btnbuscarmedicamento.UseVisualStyleBackColor = false;
+            // 
+            // txtenfermedad
+            // 
+            this.txtenfermedad.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtenfermedad.Location = new System.Drawing.Point(216, 29);
+            this.txtenfermedad.Name = "txtenfermedad";
+            this.txtenfermedad.Size = new System.Drawing.Size(147, 27);
+            this.txtenfermedad.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(5, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Enfermedad";
+            // 
+            // txtPaciente
+            // 
+            this.txtPaciente.Enabled = false;
+            this.txtPaciente.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPaciente.Location = new System.Drawing.Point(229, 114);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(277, 27);
+            this.txtPaciente.TabIndex = 139;
+            // 
             // frmEnfermedadExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(532, 494);
+            this.ClientSize = new System.Drawing.Size(519, 494);
             this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
@@ -263,6 +279,7 @@
             this.Name = "frmEnfermedadExpediente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEnfermedadExpediente";
+            this.Load += new System.EventHandler(this.frmEnfermedadExpediente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -290,8 +307,9 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnbuscarmedicamento;
-        private System.Windows.Forms.TextBox txtcodigomedicamento;
+        private System.Windows.Forms.TextBox txtenfermedad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPaciente;
+        private System.Windows.Forms.TextBox txtcodigo;
     }
 }

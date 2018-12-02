@@ -114,6 +114,7 @@ namespace Proyecto_Clinica
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             this.Close();
         }
     }

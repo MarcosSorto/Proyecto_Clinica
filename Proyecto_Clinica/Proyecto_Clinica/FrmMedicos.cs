@@ -59,7 +59,7 @@ namespace Proyecto_Clinica
                 Comando.Connection = con.Conexion;
                 try
                 {
-                    //msj.ms_ok(ComDepartamento.SelectedValue.ToString());
+                    
                     Comando.CommandType = CommandType.StoredProcedure;
                     Comando.CommandText = String.Format("sp_AgregarMedico");
                     Comando.Parameters.AddWithValue("Identidad", String.Format("{0}", MtxtIdentidad.Text));
