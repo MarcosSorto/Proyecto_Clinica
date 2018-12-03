@@ -44,7 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.btnbuscarmedicamento = new System.Windows.Forms.Button();
+            this.btnBuscarEnfermedad = new System.Windows.Forms.Button();
             this.txtenfermedad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPaciente = new System.Windows.Forms.TextBox();
@@ -172,7 +172,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnagregar);
-            this.groupBox1.Controls.Add(this.btnbuscarmedicamento);
+            this.groupBox1.Controls.Add(this.btnBuscarEnfermedad);
             this.groupBox1.Controls.Add(this.txtenfermedad);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -223,15 +223,16 @@
             this.btnagregar.UseVisualStyleBackColor = false;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // btnbuscarmedicamento
+            // btnBuscarEnfermedad
             // 
-            this.btnbuscarmedicamento.BackColor = System.Drawing.Color.Black;
-            this.btnbuscarmedicamento.Location = new System.Drawing.Point(369, 29);
-            this.btnbuscarmedicamento.Name = "btnbuscarmedicamento";
-            this.btnbuscarmedicamento.Size = new System.Drawing.Size(95, 28);
-            this.btnbuscarmedicamento.TabIndex = 1;
-            this.btnbuscarmedicamento.Text = "Buscar";
-            this.btnbuscarmedicamento.UseVisualStyleBackColor = false;
+            this.btnBuscarEnfermedad.BackColor = System.Drawing.Color.Black;
+            this.btnBuscarEnfermedad.Location = new System.Drawing.Point(369, 29);
+            this.btnBuscarEnfermedad.Name = "btnBuscarEnfermedad";
+            this.btnBuscarEnfermedad.Size = new System.Drawing.Size(95, 28);
+            this.btnBuscarEnfermedad.TabIndex = 1;
+            this.btnBuscarEnfermedad.Text = "Buscar";
+            this.btnBuscarEnfermedad.UseVisualStyleBackColor = false;
+            this.btnBuscarEnfermedad.Click += new System.EventHandler(this.btnbuscarmedicamento_Click);
             // 
             // txtenfermedad
             // 
@@ -306,7 +307,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Button btnbuscarmedicamento;
+        private System.Windows.Forms.Button btnBuscarEnfermedad;
         private System.Windows.Forms.TextBox txtenfermedad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPaciente;

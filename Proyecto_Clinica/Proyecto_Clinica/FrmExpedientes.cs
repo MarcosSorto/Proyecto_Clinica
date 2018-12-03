@@ -74,11 +74,8 @@ namespace Proyecto_Clinica
                     Comando.ExecuteNonQuery();
                     m = Comando.Parameters["msj"].Value.ToString();
                     Comando.Dispose();
-                    cod = codigo;
-                    tcodigo.Text = codigo;
-                    Medico = txtnomM.Text;
+                    cod = Comando.Parameters["Codigo"].Value.ToString();
                     NombrePaciente = txtnombreP.Text;
-                    txtreceta.Text = codigo;
                     Transacsion.Commit();
                     MessageBox.Show(m);
                 }
@@ -107,7 +104,7 @@ namespace Proyecto_Clinica
                     txtreceta.Text = codigo;
                     Comando.Dispose();
                     Transacsion.Commit();
-                        MessageBox.Show(m);
+                    MessageBox.Show(m);
 
                 }
                 
@@ -118,7 +115,6 @@ namespace Proyecto_Clinica
                 Transacsion.Rollback();
             }
 
-           
         }
 
         private void TextBox9_TextChanged(object sender, EventArgs e)
@@ -198,7 +194,6 @@ namespace Proyecto_Clinica
         private void Btnactualizar_Click(object sender, EventArgs e)
         {
             Cargar_Datos("sp_EditarExpediente");
-            Limpiar();
         }
 
         private void Tcodigo_SizeChanged(object sender, EventArgs e)
@@ -254,19 +249,20 @@ namespace Proyecto_Clinica
 
         private void Limpiar()
         {
-            tcodigo.Text = "";
-            maskedTextBox1.Text = "";
-            maskedTextBox2.Text = "";
-            maskedTextBox3.Text = "";
-            txtnombreP.Text = "";
-            txtnomM.Text = "";
-            txtenM.Text = "";
-            txtpeso.Text = "";
-            txtestatura.Text = "";
-            txtpresion.Text = "";
-            txttemperatura.Text = "";
-            txtobservacion.Text = "";
-            txtreceta.Text = "";
+            //tcodigo.Text = "";
+            //maskedTextBox1.Text = "";
+            //maskedTextBox2.Text = "";
+            //maskedTextBox3.Text = "";
+            //txtnombreP.Text = "";
+            //txtnomM.Text = "";
+            //txtenM.Text = "";
+            //txtpeso.Text = "";
+            //txtestatura.Text = "";
+            //txtpresion.Text = "";
+            //txttemperatura.Text = "";
+            //txtobservacion.Text = "";
+            //txtreceta.Text = "";
+            
 
         }
         private void Txtreceta_TextChanged(object sender, EventArgs e)
@@ -300,15 +296,11 @@ namespace Proyecto_Clinica
                     }
                     else
                     {
-                        Cargar_Datos("sp_EditarExpediente");
                         frmEnfermedadExpediente nuevo = new frmEnfermedadExpediente();
+                        Cargar_Datos("sp_EditarExpediente");
                         nuevo.ShowDialog();
-                    }
-                   
-            }
-                 
-
-            
+                    }   
+            }            
         }
     }
 }

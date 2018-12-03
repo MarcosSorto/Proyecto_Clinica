@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Clases\Clase_AntecedentePaciente.cs" />
     <Compile Include="Clases\Clase_Conexion.cs" />
+    <Compile Include="Clases\Clase_Enfermedades.cs" />
     <Compile Include="Clases\Clase_Pacientes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -67,6 +68,12 @@
     </Compile>
     <Compile Include="FrmAntecedentesPaciente.designer.cs">
       <DependentUpon>FrmAntecedentesPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarEnfermedad.Designer.cs">
+      <DependentUpon>FrmBuscarEnfermedad.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBuscarEnfermera.cs">
       <SubType>Form</SubType>
@@ -198,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAntecedentesPaciente.resx">
       <DependentUpon>FrmAntecedentesPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarEnfermedad.resx">
+      <DependentUpon>FrmBuscarEnfermedad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarEnfermera.resx">
       <DependentUpon>FrmBuscarEnfermera.cs</DependentUpon>

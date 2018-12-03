@@ -187,5 +187,13 @@ namespace Proyecto_Clinica
                 btnagregar.Visible = false;
             }
         }
+
+        private void btnbuscarmedicamento_Click(object sender, EventArgs e)
+        {
+            FrmBuscarEnfermedad nuevo = new FrmBuscarEnfermedad();
+            nuevo.ShowDialog();
+            txtcodigo.Text = FrmBuscarEnfermedad.codigo;
+            txtenfermedad.Text = FrmBuscarEnfermedad.nombre;
+        }
     }
 }

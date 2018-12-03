@@ -146,8 +146,6 @@ namespace Proyecto_Clinica
                     Comando.CommandText = String.Format("sp_listarMedicina");
                     Comando.Parameters.AddWithValue("Nombre", String.Format("{0}", txtnombre.Text));
                     Comando.Parameters.AddWithValue("Presentacion", String.Format("{0}", cmbpresentacion.SelectedValue.ToString()));
-
-
                     Comando.Parameters.Add("Laboratorio", MySqlDbType.String).Direction = ParameterDirection.Output;
                     Comando.Parameters.Add("msj", MySqlDbType.String).Direction = ParameterDirection.Output;
                     Comando.Parameters.Add("msj2", MySqlDbType.String).Direction = ParameterDirection.Output;
@@ -313,7 +311,7 @@ namespace Proyecto_Clinica
         {
             dataGridView1.Rows.Clear();
             total = 0;
-            //dataGridView1.DataSource = tabla;
+
             for (int x = 0; x < tabla.Rows.Count; x++)
             {
                 dataGridView1.Rows.Add();

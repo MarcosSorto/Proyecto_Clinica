@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Proyecto_Clinica.Clases;
 
 
 namespace Proyecto_Clinica
@@ -33,37 +34,27 @@ namespace Proyecto_Clinica
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if(txtNombreEnfermedad.Text==""|| txtDescripcion.Text == "")
+            if (txtNombreEnfermedad.Text == "" || txtDescripcion.Text == "")
             {
                 MessageBox.Show("Debe de ingresar el nombre y la descripcion de la enfermedad", "Error en ingreso", MessageBoxButtons.OK);
 
             }
             else
             {
-                Clase_Conexion con = new Clase_Conexion();
-                String m;
-                con.Conectar();
-                MySqlCommand Comando = con.Conexion.CreateCommand();
-                Comando.Connection = con.Conexion;
-                try
+                //Instanciamos de la clase que necesitamos
+                Clase_Enfermedades nuevo = new Clase_Enfermedades();
+                nuevo.Nombre = txtNombreEnfermedad.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
+                if (Clase_Enfermedades.InsertarEnfermedad(nuevo))
                 {
-                    Comando.CommandType = CommandType.StoredProcedure;
-                    Comando.CommandText = String.Format("sp_AgregarEnfermedad");
-                    Comando.Parameters.AddWithValue("Nombre", String.Format("{0}", txtNombreEnfermedad.Text));
-                    Comando.Parameters.AddWithValue("Descripcion", String.Format("{0}", txtDescripcion.Text));
-                    Comando.Parameters.Add("Msj", MySqlDbType.String).Direction = ParameterDirection.Output; Comando.ExecuteNonQuery();
-                    m = Comando.Parameters["Msj"].Value.ToString();
-                    Comando.Dispose();
-
+                    MessageBox.Show(nuevo.msj, "Control de enfermedades");
                     LimpiarDatos();
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    m = "Excepcion de tipo " + ex.GetType().ToString() +
-                            "\n" + ex.ToString() +
-                            " fue encontrado al ejecutar consulta.";
+                    MessageBox.Show("Ocurrió un error duarante la inserción", "Control de enfermedades");
+                    LimpiarDatos();
                 }
-                MessageBox.Show(m);
             }
         }
 
@@ -91,39 +82,32 @@ namespace Proyecto_Clinica
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             // Verificamos si hay datos ingresados para guardar.
-            if(txtDescripcion.Text=="" || txtNombreEnfermedad.Text == "")
+            if (txtDescripcion.Text == "" || txtNombreEnfermedad.Text == "")
             {
                 MessageBox.Show("Debe ingresar un nombre y una descripción", "Error en ingreso", MessageBoxButtons.OK);
             }
             else
             {
-                Clase_Conexion con = new Clase_Conexion();
-                String m;
-                con.Conectar();
-                MySqlCommand Comando = con.Conexion.CreateCommand();
-                Comando.Connection = con.Conexion;
-                try
-                {
-                    Comando.CommandType = CommandType.StoredProcedure;
-                    Comando.CommandText = String.Format("sp_EditarEnfermedad");
-                    Comando.Parameters.AddWithValue("nombre", String.Format("{0}", txtNombreEnfermedad.Text));
-                    Comando.Parameters.AddWithValue("descripcion", String.Format("{0}", txtDescripcion.Text));
-                    Comando.Parameters.AddWithValue("nuevoNombre", String.Format("{0}", txtnuevoNombre.Text));
-                    Comando.Parameters.Add("msj", MySqlDbType.String).Direction = ParameterDirection.Output; Comando.ExecuteNonQuery();
-                    m = Comando.Parameters["msj"].Value.ToString();
-                    Comando.Dispose();
+                // Instanciamos la clase que necesitamos
+                Clase_Enfermedades nuevo = new Clase_Enfermedades();
+                nuevo.Nombre = txtnuevoNombre.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
+                nuevo.NuevoNombre = txtnuevoNombre.Text;
 
+                // Intentamos actualizar los datos.
+                if (Clase_Enfermedades.ActualizarEnfermdad(nuevo))
+                {
+                    MessageBox.Show(nuevo.msj, "Control de enfermedades");
                     LimpiarDatos();
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    m = "Excepcion de tipo " + ex.GetType().ToString() +
-                            "\n" + ex.ToString() +
-                            " fue encontrado al ejecutar consulta.";
+                    MessageBox.Show("Ocurrió un error durante la actualización", "Control de enfermedades");
+                    LimpiarDatos();
                 }
-                MessageBox.Show(m);
+
             }
-        
+
         }
 
         private void BtnInhabilitar_Click(object sender, EventArgs e)
@@ -134,50 +118,32 @@ namespace Proyecto_Clinica
             }
             else
             {
-                Clase_Conexion con = new Clase_Conexion();
-                String m;
-                con.Conectar();
-                MySqlCommand Comando = con.Conexion.CreateCommand();
-                Comando.Connection = con.Conexion;
-                try
+                // Instanciamos de la clase que necesitamos
+                Clase_Enfermedades nuevo = new Clase_Enfermedades();
+                nuevo.Nombre = txtNombreEnfermedad.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
+                // Intentamos inhabilitar la enfermedad
+                if (Clase_Enfermedades.InhabilitarEnfermedad(nuevo))
                 {
-                    Comando.CommandType = CommandType.StoredProcedure;
-                    Comando.CommandText = String.Format("sp_EditarEnfermedad");
-                    Comando.Parameters.AddWithValue("Nombre", String.Format("{0}", txtNombreEnfermedad.Text));
-                    Comando.Parameters.AddWithValue("Descripcion", String.Format("{0}", txtDescripcion.Text));
-                    Comando.Parameters.Add("Msj", MySqlDbType.String).Direction = ParameterDirection.Output; Comando.ExecuteNonQuery();
-                    m = Comando.Parameters["Msj"].Value.ToString();
-                    Comando.Dispose();
-
+                    MessageBox.Show(nuevo.msj, "Control de enfermedades");
                     LimpiarDatos();
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    m = "Excepcion de tipo " + ex.GetType().ToString() +
-                            "\n" + ex.ToString() +
-                            " fue encontrado al ejecutar consulta.";
+                    MessageBox.Show("Ocurrió un error durante la inhabilitación", "Control de enfermedades");
+                    LimpiarDatos();
                 }
-                MessageBox.Show(m);
             } 
         }
 
         private void TxtNombreEnfermedad_Leave(object sender, EventArgs e)
         {
-            Clase_Conexion con = new Clase_Conexion();
-            con.Conectar();
-            MySqlCommand Comando = con.Conexion.CreateCommand();
-            Comando.Connection = con.Conexion;
-            try
-            {
-                Comando.CommandType = CommandType.StoredProcedure;
-                Comando.CommandText = String.Format("sp_listarEnfermedad");
-                Comando.Parameters.AddWithValue("nombre", String.Format("{0}", txtNombreEnfermedad.Text));
-                Comando.Parameters.Add("descripcion", MySqlDbType.String).Direction = ParameterDirection.Output;
-                Comando.ExecuteNonQuery();
-                txtDescripcion.Text = Comando.Parameters["descripcion"].Value.ToString();
-                Comando.Dispose();
+            // instanciamos de la clase enfermedad.
+            Clase_Enfermedades nuevo = Clase_Enfermedades.obtenerEnfermeda(txtNombreEnfermedad.Text);
 
-                if (txtDescripcion.Text!="")
+            // Llenamos los datos obtenidos
+            txtDescripcion.Text = nuevo.Descripcion;
+                if (txtDescripcion.Text !="")
                 {
                     txtnuevoNombre.Visible = true;
                     lblnuevoNombre.Visible = true;
@@ -185,11 +151,17 @@ namespace Proyecto_Clinica
                     btnEditar.Enabled = true;
                     btnInhabilitar.Enabled = true;
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Error al momento de cargar enfermedad");
-            }
+           
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBuscarEnfermedad nuevo = new FrmBuscarEnfermedad();
+            nuevo.ShowDialog();
+
+            txtNombreEnfermedad.Text = FrmBuscarEnfermedad.nombre;
+            txtDescripcion.Text = FrmBuscarEnfermedad.descripcion;
+            txtNombreEnfermedad.Focus();
         }
     }
 }
